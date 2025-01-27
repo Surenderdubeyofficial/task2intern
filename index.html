@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Planner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Budget Planner</h1>
+  </header>
+
+  <main>
+    <section id="form-section" class="section">
+      <h2>Add Income/Expense</h2>
+      <form id="budget-form" class="form">
+        <div class="form-group">
+          <label for="type">Type</label>
+          <select id="type" required>
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="category">Category</label>
+          <input type="text" id="category" placeholder="Enter category" required />
+        </div>
+        <div class="form-group">
+          <label for="amount">Amount</label>
+          <input type="number" id="amount" placeholder="Enter amount" required />
+        </div>
+        <button type="submit">Add</button>
+      </form>
+    </section>
+
+    <section id="summary-section" class="section">
+      <h2>Summary</h2>
+      <p>Total Income: <span id="total-income">$0.00</span></p>
+      <p>Total Expense: <span id="total-expense">$0.00</span></p>
+      <p>Balance: <span id="balance">$0.00</span></p>
+    </section>
+
+    <section id="charts-section" class="section">
+      <h2>Financial Insights</h2>
+      <div class="charts">
+        <canvas id="expense-chart" width="400" height="200"></canvas>
+        <canvas id="trend-chart" width="400" height="200"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built with ❤️ by Surender Dubey</p>
+  </footer>
+
+  <!-- Include Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
